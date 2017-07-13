@@ -6,7 +6,7 @@ var baseWebpackConfig = require('./webpack.base.conf')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
 var FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
 // 提取css到单文件
-// var ExtractTextPlugin = require('extract-text-webpack-plugin')
+var ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 
 // add hot-reload related code to entry chunks
@@ -36,7 +36,7 @@ module.exports = merge(baseWebpackConfig, {
       template: 'index.html',
       inject: true
     }),
-    new FriendlyErrorsPlugin()
-    // new ExtractTextPlugin(utils.assetsPath('css/app.css'))
+    new FriendlyErrorsPlugin(),
+    new ExtractTextPlugin(utils.assetsPath('css/app.css'))
   ]
 })
