@@ -1,17 +1,25 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <router-view></router-view>
+      <div>
+          <sideMenu></sideMenu>
+          <router-view></router-view>
+      </div>
   </div>
 </template>
 
 <script>
+import sideMenu from './components/sideMenu.vue';
+
 export default {
-  name: 'app'
-}
+    name: 'app',
+    components: {
+        sideMenu
+    }
+};
 </script>
 
 <style>
+@import "assets/main.scss";
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
