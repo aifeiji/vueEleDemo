@@ -15,6 +15,16 @@ export default {
     components: {
         sideMenu
     },
+    watch: {
+        '$route': 'jumpToHome'
+    },
+    methods: {
+        jumpToHome() {
+            if (this.$route.path === '/') {
+                this.$router.replace('report');
+            }
+        }
+    },
     created() {
         console.log(this.$router, this.$route);
         if (this.$route.path === '/') {
