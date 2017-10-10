@@ -1,21 +1,22 @@
 /**
  * Created by shenyuye on 2017/7/13.
  */
-import report from '../components/report/report.vue';
-import dashboard from '../components/dashboard/dashboard.vue';
-import dataSource from '../components/dataSource/dataSource.vue';
+import report from '../view/report.vue';
+// import detail from '../components/report/detail.vue';
+import dashboard from '../view/dashboard.vue';
+import dataSource from '../view/dataSource.vue';
 
 const PAGE_LEFT_NAV = [
     {
-        path: 'report',
+        path: '/report',
         component: report
     },
     {
-        path: 'dashboard',
+        path: '/dashboard',
         component: dashboard
     },
     {
-        path: 'dataSource',
+        path: '/dataSource',
         component: dataSource
     }
 ];

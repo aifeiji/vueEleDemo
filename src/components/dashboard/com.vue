@@ -1,10 +1,10 @@
 <template>
     <div>
-        dashboard
+        dashboard-com
     </div>
 </template>
 <script>
     export default {
-        name: 'dashboard'
+        name: 'com'
     };
 </script>
